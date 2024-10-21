@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import inicio from './screens/categoria';
 import agregar from './screens/agregar';
 import eliminar from './screens/eliminar';
 import modificar from './screens/modificar';
@@ -21,6 +22,17 @@ export default function App() {
           component={inicio}
           options={{
             title: 'SCRUM5M',
+            headerTitleAlign: 'center',
+            headerStyle: { backgroundColor: '#3E8E41' }, 
+            headerTintColor: 'black'
+          }} 
+        />
+
+        <Stack.Screen 
+          name="categoria" 
+          component={categoria}
+          options={{
+            title: 'agregando categoria',
             headerTitleAlign: 'center',
             headerStyle: { backgroundColor: '#3E8E41' }, 
             headerTintColor: 'black'
